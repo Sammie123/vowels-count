@@ -2,21 +2,18 @@ $(document).ready(function() {
   $("form#vowels").submit(function(event) {
     event.preventDefault();
 
-    function vowel_count(str1) {
-      var vowel_list = 'aeiouAEIOU';
-      var vcount = 0;
+    //function getVowels(word_phrase) {
 
+      var vowelCount = 0;
 
-      $("#word_phrase").val();
-      word_phrase.toString();
+      var string = $("#word_phrase").val().toLowerCase();
+      for (var i = 0; i <= string.length -1; i++) {
 
-      for (var index = 0; x <str1.length; x++) {
-        if (vowel_list.indexOf(str1[index]) !== -1) {
-          vcount += 1;
-
-          alert(vcount);
-        };
-      };
-    };
+       if (string.charAt(i) === "a" || string.charAt(i) === "e" || string.charAt(i) === "i" || string.charAt(i) === "u" || string.charAt(i) === "o") {
+         vowelCount += 1;
+         string.toString();
+        }
+      }
+      alert(vowelCount);
   });
 });
